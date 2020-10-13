@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="../../../Images/silueta.ico">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="../../scriptTienda.js">
+
+    <link rel="stylesheet" href="../../css/estilo.css">
+    <title>Mylofurn Designs - Mesa de luz Lansky</title>
+</head>
+
+<body>
+
+    <header>
+        <a name="arriba"></a>
+    </header>
+
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="../../index.html"><img src="../../Images/logoweb.png" alt="logoMylo"
+                    class="logoMylo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <ion-icon name="menu-outline"></ion-icon>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../tucasa.html">Tu casa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../elatelier.html">El atelier</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Tienda.html">Tienda</a>
+                    </li>
+                
+                    <li class="nav-item">
+                        <a class="nav-link" href="../novedades.html">Novedades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../contacto.html">Contacto</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <div>
+        <h1 class="tituloproducto">Mesa de luz <b>Lansky</b></h1>
+        <h2 class="precio">$Precio$</h2>
+        <div class="precioContado"><p>Precio de contado</p></div>
+
+    </div>
+    <div class="columnasDoble">
+        <div class="container-fluid px-sm-1 py-5 mx-auto">
+            <div class="row">
+                <div class="d-flex">
+                    <div class="card">
+                        <div class="d-flex flex-column thumbnails">
+                            <div id="f1" class="tb tb-active"> <img class="thumbnail-img fit-image" src="../../Images/Mesas de Luz/MDL 2/Lansky 1.jpg"> </div>
+                            <div id="f2" class="tb"> <img class="thumbnail-img fit-image" src="../../Images/Mesas de Luz/MDL 2/2.jpg"> </div>
+                            <div id="f3" class="tb"> <img class="thumbnail-img fit-image" src="../../Images/Mesas de Luz/MDL 3/3.jpg"> </div>
+                            
+                        </div>
+                        <fieldset id="f11" class="active">
+                            <div class="product-pic"> <img class="pic0" src="../../Images/Mesas de Luz/MDL 2/Lansky 1.jpg"> </div>
+                        </fieldset>
+                        <fieldset id="f21" class="">
+                            <div class="product-pic"> <img class="pic0" src="../../Images/Mesas de Luz/MDL 2/2.jpg"> </div>
+                        </fieldset>
+                        <fieldset id="f31" class="">
+                            <div class="product-pic"> <img class="pic0" src="../../Images/Mesas de Luz/MDL 3/3.jpg"> </div>
+                        </fieldset>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div><h3 class="medidas">Medidas</h3>
+            
+            <div class="alto"><b>Alto:</b> 66cm</div>
+            <div class="largo"><b>Largo:</b> 45cm</div>
+            <div class="profundidad"><b>Profundidad:</b> 40cm</div>
+            
+            
+            <div class="detallesfabrica">Mesa de luz fabricada en combinado de hierro y enchapado en paraíso con lustre natural semi mate. Correderas teléscopicas.</div>
+            <div class="opcional"><b>Opcional: Hierro en blanco.</b></div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+        
+            $(".tb").hover(function () {
+        
+                $(".tb").removeClass("tb-active");
+                $(this).addClass("tb-active");
+        
+                current_fs = $(".active");
+        
+                next_fs = $(this).attr('id');
+                next_fs = "#" + next_fs + "1";
+        
+                $("fieldset").removeClass("active");
+                $(next_fs).addClass("active");
+        
+                current_fs.animate({}, {
+                    step: function () {
+                        current_fs.css({
+                            'display': 'none',
+                            'position': 'relative'
+                        });
+                        next_fs.css({
+                            'display': 'block'
+                        });
+                    }
+                });
+            });
+        
+        });
+        </script>
+
+    <footer>
+
+        <div class="irArriba">
+            <a href="#arriba"><img src="../../Images/Iconos redes/arriba.png" alt="arriba LOGO" alt="arriba LOGO"
+                    width="55" height="55"></a>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+
+</html>
